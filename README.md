@@ -30,10 +30,12 @@ For anyone wanting to extend this setup or go hardcore on homelabbing, [this](ht
 
 | Component | Details |
 |---|---|
-| **SBC (main board)** | Raspberry Pi (acts as the NAS server) |
-| **Storage drive** | External HDD connected via USB |
-| **Network** | Connected via Ethernet (with Wi-Fi as fallback) |
-| **Client devices tested** | Windows 10, Windows 11, Android |
+| **NAS Server** | Raspberry Pi 4B 8GB |
+| **Storage drive** | 4TB 3.5" HDD (mounted on docking station connected via USB3.0) |
+| **Network** | Cat6 ethernet cable connected to router |
+
+![pinas setup](https://github.com/user-attachments/assets/540dddaa-a5fb-4b79-a38a-dae52e2301cc)
+
 
 ### Software & Features
 
