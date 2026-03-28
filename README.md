@@ -7,14 +7,21 @@
 
 # Introduction
 
-Our family had lost precious documents and photos more than once due to failing internal hard drives. Beyond that, family photos were scattered across multiple devices, often duplicated between members, with no central place to manage them — which made something as simple as selecting photos to print unnecessarily painful.
+The main motivation for building this DIY NAS in the first place came out of necessity due to a few issues faced with my family data:
+- My family had lost precious documents and photos previously due to failing internal hard drives.
+- Family photos were scattered across multiple devices, often duplicated between members, with no central place to manage them — which made something as simple as selecting photos to print unnecessarily painful.
 
-**PiNAS** was built to solve both of these problems:
+This DIY NAS (nicknamed **PiNAS**) was built to solve both of these problems:
 
 - **Centralised shared storage** — a single location for family data, especially photos and documents, accessible by every family member from any device on the home network or remotely.
-- **Foundation for a proper backup strategy** — a NAS alone is not a backup, but this device is the first building block toward a full backup plan (see [To Do](#to-do)).
+- **Foundation for a proper backup strategy** — a NAS alone is not a backup, but this setup is the first building block toward a full backup plan (see [To Do](#to-do)).
 
-The goal was to keep costs low, have full ownership over the hardware and data, and learn how self-hosted infrastructure works in the process.
+### Why not just use cloud services or buy an off-the-shelf NAS?
+1. The cloud is NOT a backup, it is just someone else's machine, so I would prefer to have full ownership over the hardware and data, plus these services could increase prices at any time.
+2. Keep costs low by utilizing hardware I already have at my disposal (Raspberry Pi, ethernet cables, and a beefy 4TB 3.5" HDD). For anyone planning to follow this setup guide, instead of following my hardware setup exactly, try looking around your home for any unused devices like mini PCs, Single Board Computers (SBC) or even old laptops.
+3. Learn how self-hosted infrastructure works in the process.
+
+For anyone wanting to extend this setup or go hardcore on homelabbing, [this](https://wiki.futo.org/index.php/Introduction_to_a_Self_Managed_Life:_a_13_hour_%26_28_minute_presentation_by_FUTO_software) is a great resource.
 
 
 # Tech Overview
@@ -252,6 +259,3 @@ Set up TLS/SSL so the OMV admin GUI is served over HTTPS, protecting admin crede
 
 ### 7. Fail2ban Email Notifications
 Fail2ban is installed but email alerting for banning events needs to be fully configured and tested.
-
-
-# Resources
