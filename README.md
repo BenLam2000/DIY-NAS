@@ -1,32 +1,11 @@
-# Introduction
-the technical reasoning will be interweaved with the setup instructions as it will suit the flow better for each feature. But they will be hidden so it does not distract those who purely want to follow setup instructions only.
-
-# Tech Overview
-listing down what the hardware requirements are
-what features are included
-
-
-# Setup
-
-
-# To Do
-
-
-# Resources
-
-
-
-# PiNAS — Family NAS Built on Raspberry Pi + OMV7
-
-## Table of Contents
+# Table of Contents
 1. [Introduction](#introduction)
 2. [Tech Overview](#tech-overview)
-3. [Setup Guide](#setup-guide)
+3. [Setup](#setup)
 4. [To Do](#to-do)
 
----
 
-## Introduction
+# Introduction
 
 Our family had lost precious documents and photos more than once due to failing internal hard drives. Beyond that, family photos were scattered across multiple devices, often duplicated between members, with no central place to manage them — which made something as simple as selecting photos to print unnecessarily painful.
 
@@ -37,9 +16,8 @@ Our family had lost precious documents and photos more than once due to failing 
 
 The goal was to keep costs low, have full ownership over the hardware and data, and learn how self-hosted infrastructure works in the process.
 
----
 
-## Tech Overview
+# Tech Overview
 
 ### Hardware
 
@@ -48,7 +26,7 @@ The goal was to keep costs low, have full ownership over the hardware and data, 
 | **SBC (main board)** | Raspberry Pi (acts as the NAS server) |
 | **Storage drive** | External HDD connected via USB |
 | **Network** | Connected via Ethernet (with Wi-Fi as fallback) |
-| **Client devices tested** | Windows 10, Windows 11, Android, iOS |
+| **Client devices tested** | Windows 10, Windows 11, Android |
 
 ### Software & Features
 
@@ -76,9 +54,8 @@ The goal was to keep costs low, have full ownership over the hardware and data, 
 - **Remote access over VPN** — WireGuard tunnel allows secure access to the NAS from outside the home network, including from smartphones.
 - **Docker-ready** — containerised services can be added alongside NAS functionality on the same device.
 
----
 
-## Setup Guide
+# Setup
 
 > **Prerequisites:** Raspberry Pi board, microSD card (for OS), external USB hard drive, a PC on the same network, access to your home router admin page.
 
@@ -235,9 +212,8 @@ Remote access is handled via a WireGuard VPN tunnel, which avoids exposing NAS s
 
 OMV GUI: Storage → S.M.A.R.T. → enable and schedule regular self-tests on the drive. Enable system stats monitoring under System → Monitoring to track CPU, RAM, and disk usage over time.
 
----
 
-## To Do
+# To Do
 
 ### 1. Offsite Backup (Second NAS Device)
 A single NAS is **not a backup** — it is a single point of failure. The plan is to set up a second similar device (Raspberry Pi + OMV7 + HDD) at a separate physical location (offsite). Data from the primary NAS will be replicated to the offsite device, following the **3-2-1 backup rule**:
@@ -276,3 +252,6 @@ Set up TLS/SSL so the OMV admin GUI is served over HTTPS, protecting admin crede
 
 ### 7. Fail2ban Email Notifications
 Fail2ban is installed but email alerting for banning events needs to be fully configured and tested.
+
+
+# Resources
